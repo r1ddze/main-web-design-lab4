@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c2c2c;
+    min-height: 100vh;
+    padding: 32px 20px;
+    background: linear-gradient(135deg, #eef2f7 0%, #dfe7f1 50%, #e8eaf6 100%);
+}
+
+.site-header,
+.site-footer {
+    max-width: 1000px;
+    margin: 0 auto 28px;
+    padding: 24px 32px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(44, 62, 80, 0.08);
+}
+
+.site-footer {
+    margin: 28px auto 0;
+}
+
+.main-title {
+    color: red;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.nav-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.link {
+    display: inline-block;
+    padding: 8px 18px;
+    color: green;
+    background: #f1f8f2;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.special-link {
+    color: blue;
+    background: #eef2ff;
+}
+
+.yellow-link {
+    color: rgb(255, 196, 0);
+    background: #fffbe6;
+}
+
+a[href="#"] {
+    text-decoration: none;
+}
+
+a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(44, 62, 80, 0.15);
+    opacity: 0.9;
+}
+
+.page {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.content,
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post,
+.widget {
+    background: #ffffff;
+    padding: 22px 26px;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(44, 62, 80, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.post:hover,
+.widget:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(44, 62, 80, 0.12);
+}
+
+#first-post {
+    border-left: 6px solid orange;
+    color: orange;
+}
+
+#first-post p {
+    color: orange;
+}
+
+.post:nth-of-type(2) {
+    border-left: 6px solid purple;
+}
+
+.post:nth-of-type(2) h2,
+.post:nth-of-type(2) p {
+    color: purple;
+}
+
+.post h2 {
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+}
+
+.post h2::before {
+    content: "★ ";
+    color: #ffb300;
+}
+
+.post h2 + p {
+    font-size: 1.02rem;
+    padding-top: 6px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+.widget h3 {
+    color: pink;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.4px;
+}
+
+.important-widget h3 {
+    color: maroon;
+}
+
+.color-list li {
+    padding: 6px 10px;
+    border-radius: 8px;
+    list-style: none;
+    margin-bottom: 4px;
+    background: #fafafa;
+}
+
+.color-list li:nth-child(1) {
+    color: gray;
+}
+
+.color-list li:nth-child(2) {
+    color: brown;
+}
+
+.color-list .highlighted {
+    color: black;
+    font-weight: 700;
+    background: #f0f0f0;
+}
+
+.note {
+    color: maroon;
+    font-weight: 600;
+}
+
+.note::after {
+    content: " ✦";
+    color: #c0392b;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+label {
+    font-weight: 600;
+    color: #34495e;
+}
+
+input[placeholder="Белый"] {
+    padding: 10px 14px;
+    color: white;
+    background: #2c3e50;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input[placeholder="Белый"]:focus {
+    border-color: #7f8c8d;
+    box-shadow: 0 0 0 4px rgba(127, 140, 141, 0.2);
+}
+
+input[placeholder="Белый"]::placeholder {
+    color: #bdc3c7;
+}
+
+.submit-btn {
+    padding: 10px 22px;
+    color: black;
+    background: #f5f5f5;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+    background: #eaeaea;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(44, 62, 80, 0.12);
+}
+
+@media (max-width: 720px) {
+    .page {
+        grid-template-columns: 1fr;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+}
